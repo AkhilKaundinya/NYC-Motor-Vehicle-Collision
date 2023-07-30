@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_LjA1INzGEe2zAK2n-frlhg" label="Prestg_NYC_Crashes" description="" language="java" technicalLabel="PRESTG_NYC_CRASHES" local="true" author="_LjA1IdzGEe2zAK2n-frlhg" productVersion="Talend Real-time Big Data Platform-8.0.1.20211109_1610" type="DQ" itemsRelationVersion="1.3">
+    <componentsSettings xmi:id="_AkQqoN5dEe22v4hoQehU2Q" name="DI|tHashInput" family="Technical"/>
+    <componentsSettings xmi:id="_A-Op0N5dEe22v4hoQehU2Q" name="DI|tHashOutput" family="Technical"/>
+    <migrationTask xmi:id="_LkCI0NzGEe2zAK2n-frlhg" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_LjA1IdzGEe2zAK2n-frlhg" login="user@talend.com" password="D41D8CD98F00B204E9800998ECF8427E"/>
+</xmi:XMI>
