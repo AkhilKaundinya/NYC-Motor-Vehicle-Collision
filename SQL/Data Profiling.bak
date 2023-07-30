@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="150" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="23">odbc:DSN=Google Big Access|||select * 
+from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=Google Big Access
+Query=select * 
+from DAMG7370_Tea...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Collision_Id" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="Collision_dt" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Date" />
+            <Field name="Collision_day" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="Collision_time" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Time" />
+            <Field name="Collision_hour" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="Collision_dayoftheweek" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="borough" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="contributing_factor_vehicle_1" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="contributing_factor_vehicle_2" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="contributing_factor_vehicle_3" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="contributing_factor_vehicle_4" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="contributing_factor_vehicle_5" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="cross_street_name" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="latitude" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Double" />
+            <Field name="longitude" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Double" />
+            <Field name="location" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="number_of_cyclist_injured" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="number_of_cyclist_killed" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="number_of_motorist_injured" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="number_of_motorist_killed" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="number_of_pedestrians_injured" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="number_of_pedestrians_killed" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="number_of_persons_injured" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="number_of_persons_killed" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+            <Field name="off_street_name" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="on_street_name" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="vehicle_type_code1" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="vehicle_type_code2" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="vehicle_type_code_3" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="vehicle_type_code_4" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="vehicle_type_code_5" size="16384" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="V_WString" />
+            <Field name="zip_code" source="File: odbc:DSN=Google Big Access|||select * &#xA;from DAMG7370_Team17_NYC_MV.pre_stg_nyc_mvc DAMG7370_Team17_NYC_MV_pre_stg_nyc_mvc" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+  </Nodes>
+  <Connections />
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Data Profiling</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="e5fdd1df-eedb-43ef-9ec3-c09e302719b6" />
+      <Telemetry>
+        <PreviousWorkflowId value="43ec656e-438d-4630-9e50-d2ad77b4cb62" />
+        <OriginWorkflowId value="43ec656e-438d-4630-9e50-d2ad77b4cb62" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,3211 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="171">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1481" y="904" width="580" height="189" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>DimDate</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="168">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="1506" y="953" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\raoak\Downloads\NYC_DIM_DATE.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>NYC_DIM_DATE.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date_SK" size="254" source="File: C:\Users\raoak\Downloads\NYC_DIM_DATE.csv" type="V_String" />
+                <Field name="Date_AK" size="254" source="File: C:\Users\raoak\Downloads\NYC_DIM_DATE.csv" type="V_String" />
+                <Field name="DayName" size="254" source="File: C:\Users\raoak\Downloads\NYC_DIM_DATE.csv" type="V_String" />
+                <Field name="DayOfYear" size="254" source="File: C:\Users\raoak\Downloads\NYC_DIM_DATE.csv" type="V_String" />
+                <Field name="Month" size="254" source="File: C:\Users\raoak\Downloads\NYC_DIM_DATE.csv" type="V_String" />
+                <Field name="MonthName" size="254" source="File: C:\Users\raoak\Downloads\NYC_DIM_DATE.csv" type="V_String" />
+                <Field name="Quarter" size="254" source="File: C:\Users\raoak\Downloads\NYC_DIM_DATE.csv" type="V_String" />
+                <Field name="Year" size="254" source="File: C:\Users\raoak\Downloads\NYC_DIM_DATE.csv" type="V_String" />
+                <Field name="MMYYYY" size="254" source="File: C:\Users\raoak\Downloads\NYC_DIM_DATE.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="169">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1626" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Date_SK" selected="True" type="Int64" size="8" />
+                <SelectField field="Date_AK" selected="True" />
+                <SelectField field="DayName" selected="True" />
+                <SelectField field="DayOfYear" selected="True" type="Int64" size="8" />
+                <SelectField field="Month" selected="True" type="Int64" size="8" />
+                <SelectField field="MonthName" selected="True" />
+                <SelectField field="Quarter" selected="True" />
+                <SelectField field="Year" selected="True" type="Int64" size="8" />
+                <SelectField field="MMYYYY" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="183">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1938" y="978" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||DimDate</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="Date_SK" Dest="Date_SK" />
+                    <Field Source="DayName" Dest="DayName" />
+                    <Field Source="DayOfYear" Dest="DayOfYear" />
+                    <Field Source="Month" Dest="Month" />
+                    <Field Source="MonthName" Dest="MonthName" />
+                    <Field Source="Quarter" Dest="Quarter" />
+                    <Field Source="Year" Dest="Year" />
+                    <Field Source="MMYYYY" Dest="MMYY" />
+                    <Field Source="Date_Ak2" Dest="Date_AK" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=DimDate</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="184">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+            <Position x="1710" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <IsFrom value="False" />
+              <InputFieldName>Date_AK</InputFieldName>
+              <Language>English</Language>
+              <Format>dd-MM-yyyy</Format>
+              <OutputFieldName>Date_Ak</OutputFieldName>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Convert Date_AK From:
+dd-MM-yyyy</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+        </Node>
+        <Node ToolID="185">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1842" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Date_SK" selected="True" />
+                <SelectField field="Date_AK" selected="False" type="Date" size="10" />
+                <SelectField field="DayName" selected="True" />
+                <SelectField field="DayOfYear" selected="True" />
+                <SelectField field="Month" selected="True" />
+                <SelectField field="MonthName" selected="True" />
+                <SelectField field="Quarter" selected="True" />
+                <SelectField field="Year" selected="True" />
+                <SelectField field="MMYYYY" selected="True" />
+                <SelectField field="Date_Ak2" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="167">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1253" y="89" width="656" height="267" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_CONTRIBUTING_FACTOR</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="166">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1446" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[CONTRIBUTING_FACTOR_1] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[CONTRIBUTING_FACTOR_1] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="159">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1278" y="149" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="CONTRIBUTING_FACTOR_1" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="160">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="1362" y="149" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="CONTRIBUTING_FACTOR_1" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="156">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1782" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_CONTRIBUTING_FACTOR</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="CONTRIBUTING_FACTOR_SK" Dest="CONTRIBUTING_FACTOR_SK" />
+                    <Field Source="CONTRIBUTING_FACTOR_1" Dest="CONTRIBUTING_FACTOR" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_CONTRIBUTING_FACTOR</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="154">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1782" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_724aae70594ff9478e8637376bbd849b~.yxdb</TempFile>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="153">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="1686" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>CONTRIBUTING_FACTOR_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="152">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1542" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="165">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2009" y="233" width="158" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 165</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="114">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="2034" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select stg_nyc_mv_collision_vehicles.* 
+from stg_nyc_mv_collision_vehicles</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select stg_nyc_mv_collision_...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="UNIQUE_ID" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="Int64" />
+                <Field name="COLLISION_ID" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="Int64" />
+                <Field name="CRASH_DATE" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="DateTime" />
+                <Field name="CRASH_TIME" size="16" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_ID" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="STATE_REGISTRATION" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_TYPE" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_MAKE" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_MODEL" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_YEAR" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="TRAVEL_DIRECTION" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_OCCUPANTS" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="Int32" />
+                <Field name="DRIVER_SEX" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="DRIVER_LICENSE_STATUS" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="DRIVER_LICENSE_JURISDICTION" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="PRE_CRASH" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="POINT_OF_IMPACT" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_DAMAGE" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_DAMAGE_1" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_DAMAGE_2" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_DAMAGE_3" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="PUBLIC_PROPERTY_DAMAGE" size="1024" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="PUBLIC_PROPERTY_DAMAGE_TYPE" size="1024" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="CONTRIBUTING_FACTOR_1" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="CONTRIBUTING_FACTOR_2" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="113">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1241" y="461" width="156" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>NYC_CRASH</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="103">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="1266" y="510" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select stg_nyc_mv_collisions_BigQuery.* 
+from stg_nyc_mv_collisions_BigQuery</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select stg_nyc_mv_collisions...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="COLLISION_ID" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int64" />
+                <Field name="collision_dt" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Date" />
+                <Field name="collision_day" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="collision_time" size="16" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="collision_hour" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="collision_dayoftheweek" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="borough" size="40" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="zip_code" size="40" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="off_street_name" size="40" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="on_street_name" size="40" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="cross_street_name" size="40" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="latitude" scale="6" size="26" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="FixedDecimal" />
+                <Field name="longitude" scale="6" size="26" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="FixedDecimal" />
+                <Field name="location" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="contributing_factor_vehicle_1" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="contributing_factor_vehicle_2" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="contributing_factor_vehicle_3" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="contributing_factor_vehicle_4" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="contributing_factor_vehicle_5" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="number_of_cyclist_injured" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="number_of_cyclist_killed" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="number_of_motorist_injured" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="number_of_motorist_killed" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="number_of_pedestrians_injured" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="number_of_pedestrians_killed" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="number_of_persons_injured" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="number_of_persons_killed" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int32" />
+                <Field name="vehicle_type_code1" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="vehicle_type_code2" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="vehicle_type_code_3" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="vehicle_type_code_4" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="vehicle_type_code_5" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="DI_JobID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="DI_CreateDate" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="112">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="597" width="195" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Stg_nyc_mv_collision</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="10" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="64" y="631" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select stg_nyc_mv_collision_persons.* 
+from stg_nyc_mv_collision_persons</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select stg_nyc_mv_collision_...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="UNIQUE_ID" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="Int64" />
+                <Field name="COLLISION_ID" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="Int64" />
+                <Field name="CRASH_DATE" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="CRASH_TIME" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PERSON_ID" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PERSON_TYPE" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PERSON_INJURY" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="VEHICLE_ID" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PERSON_AGE" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="Int32" />
+                <Field name="EJECTION" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="EMOTIONAL_STATUS" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="BODILY_INJURY" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="POSITION_IN_VEHICLE" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="SAFETY_EQUIPMENT" size="400" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PED_LOCATION" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PED_ACTION" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="COMPLAINT" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PED_ROLE" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="CONTRIBUTING_FACTOR_1" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="CONTRIBUTING_FACTOR_2" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PERSON_SEX" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="CRASH_DATE_1" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="Date" />
+                <Field name="crash_time_1" size="8" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="93">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="400" y="53" width="755" height="241" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_PersonType</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="665" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="PERSON_TYPE" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="425" y="115" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PERSON_TYPE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="750" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="942" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>PERSON_TYPE_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1037" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_6312569202b57c4e99602fbaee47e9e1~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="545" y="115" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>All</FieldType>
+              <Fields orderChanged="False">
+                <Field name="PERSON_TYPE" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>uppercase([PERSON_TYPE])</Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>uppercase([PERSON_TYPE])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="95">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1025" y="163" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_PERSON_TYPE</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="PERSON_TYPE_SK" Dest="PERSON_TYPE_SK" />
+                    <Field Source="PERSON_TYPE" Dest="PERSON_TYPE" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_PERSON_TYPE</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="172">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="846" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[PERSON_TYPE] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[PERSON_TYPE] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="92">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="400" y="304" width="816" height="264" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_PERSON_SEX</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="665" y="355" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="PERSON_SEX" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="425" y="353" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PERSON_SEX" selected="True" size="10" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="798" y="354" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="990" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>PERSON_SEX_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1086" y="354" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_4f551eec05c5e84f96b9133599691bb5~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="545" y="354" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>All</FieldType>
+              <Fields orderChanged="False">
+                <Field name="PERSON_SEX" />
+                <Field name="PED_LOCATION" selected="False" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression><![CDATA[
+uppercase([PERSON_SEX])]]></Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[
+uppercase([PERSON_SEX])]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="96">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1086" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_PERSON_SEX</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="PERSON_SEX_SK" Dest="PERSON_SEX_SK" />
+                    <Field Source="PERSON_SEX" Dest="PERSON_SEX" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_PERSON_SEX</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="173">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="894" y="354" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[PERSON_SEX] != "N"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[PERSON_SEX] != "N"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="91">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="400" y="582" width="791" height="252" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_PERSON_INJURY</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="666" y="642" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="PERSON_INJURY" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="425" y="631" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PERSON_INJURY" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="774" y="642" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="965" y="631" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>PERSON_INJURY_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1061" y="631" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_f498001f81e14e488b85762b9af891aa~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="545" y="642" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>All</FieldType>
+              <Fields orderChanged="False">
+                <Field name="PERSON_INJURY" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression><![CDATA[
+uppercase([PERSON_INJURY])]]></Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[
+uppercase([PERSON_INJURY])]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="102">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1061" y="703" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_PERSON_INJURY</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="PERSON_INJURY_SK" Dest="PERSON_INJURY_SK" />
+                    <Field Source="PERSON_INJURY" Dest="PERSON_INJURY" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_PERSON_INJURY</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="174">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="882" y="642" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[PERSON_INJURY] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[PERSON_INJURY] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="90">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="400" y="857" width="777" height="253" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_EMOTIONAL_STATUS</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="642" y="918" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="EMOTIONAL_STATUS" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="425" y="907" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="EMOTIONAL_STATUS" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="750" y="906" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="56">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="965" y="907" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>EMOTIONAL_STATUS_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="57">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1061" y="907" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_27d134eb87761645bcf2321d103bdc89~.yxdb</TempFile>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="58">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="545" y="919" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>All</FieldType>
+              <Fields orderChanged="False">
+                <Field name="EMOTIONAL_STATUS" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>uppercase([EMOTIONAL_STATUS])</Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>uppercase([EMOTIONAL_STATUS])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="97">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1049" y="979" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_EMOTIONAL_STATUS</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="EMOTIONAL_STATUS_SK" Dest="EMOTIONAL_STATUS_SK" />
+                    <Field Source="EMOTIONAL_STATUS" Dest="EMOTIONAL_STATUS" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_EMOTIONAL_STATUS</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="175">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="858" y="906" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[EMOTIONAL_STATUS] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[EMOTIONAL_STATUS] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="87">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="401" y="1133" width="778" height="252" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_PED_ROLE</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="71">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="642" y="1182" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="PED_ROLE" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="72">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="426" y="1182" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PED_ROLE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="73">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="750" y="1182" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="74">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="954" y="1182" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>PED_ROLE_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="75">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1050" y="1182" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_c6428b05a299a143915fadae7d324af8~.yxdb</TempFile>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="76">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="534" y="1182" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>All</FieldType>
+              <Fields orderChanged="False">
+                <Field name="PED_ROLE" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression><![CDATA[
+uppercase([PED_ROLE])]]></Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[
+uppercase([PED_ROLE])]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="99">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1050" y="1254" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_PED_ROLE</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="PED_ROLE_SK" Dest="PED_ROLE_SK" />
+                    <Field Source="PED_ROLE" Dest="PED_ROLE" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_PED_ROLE</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="176">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="846" y="1182" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[PED_ROLE] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[PED_ROLE] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="111">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1409" y="449" width="742" height="348" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_Borough</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="104">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="1554" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="borough" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="105">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1434" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="borough" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="106">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1674" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="107">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="1842" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>borough_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="108">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2022" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_2a9c01ac04d25747817baff9488020a1~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="110">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2022" y="666" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||DIM_Borough</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="borough_SK" Dest="borough_sk" />
+                    <Field Source="borough" Dest="Borough" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=DIM_Borough</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="177">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1770" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[borough] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[borough] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2201" y="53" width="766" height="252" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_STATE_REGISTRATION</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="115">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2322" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="STATE_REGISTRATION" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="116">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2226" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="STATE_REGISTRATION" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="117">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2562" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="118">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2682" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>STATE_REGISTRATION_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="119">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2838" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_d644b7a1cdbac94aaf6e589b9f687b87~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="120">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2838" y="174" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_STATE_REGISTRATION</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="STATE_REGISTRATION_SK" Dest="STATE_REGISTRATION_SK" />
+                    <Field Source="STATE_REGISTRATION" Dest="STATE_REGISTRATION" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_STATE_REGISTRATION</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="178">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2418" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[STATE_REGISTRATION] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[STATE_REGISTRATION] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="128">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2212" y="353" width="766" height="265" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_VEHICLE_TYPE</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="122">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2346" y="414" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="VEHICLE_TYPE" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="123">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2237" y="415" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="VEHICLE_TYPE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="124">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2561" y="415" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="125">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2693" y="415" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>VEHICLE_TYPE_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="126">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2849" y="415" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_1e6120531d6239429821b7187b12365d~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="127">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2849" y="487" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_VEHICLE_TYPE</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="VEHICLE_TYPE_SK" Dest="VEHICLE_TYPE_SK" />
+                    <Field Source="VEHICLE_TYPE" Dest="VEHICLE_TYPE" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_VEHICLE_TYPE</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="179">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2442" y="402" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[VEHICLE_TYPE] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[VEHICLE_TYPE] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="135">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2212" y="629" width="767" height="268" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_DRIVER_LICENSE_JURISDICTION</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="129">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2346" y="678" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="DRIVER_LICENSE_JURISDICTION" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="130">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2237" y="678" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="DRIVER_LICENSE_JURISDICTION" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="131">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2561" y="679" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="132">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2693" y="679" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>DRIVER_LICENSE_JURISDICTION_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="133">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2849" y="679" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_9f24061ce96b284796f9fda2791bc59e~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="134">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2849" y="751" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_DRIVER_LICENSE_JURISDICTION</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="DRIVER_LICENSE_JURISDICTION_SK" Dest="DRIVER_LICENSE_JURISDICTION_SK" />
+                    <Field Source="DRIVER_LICENSE_JURISDICTION" Dest="DRIVER_LICENSE_JURISDICTION" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_DRIVER_LICENSE_JURISDICT...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="180">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2454" y="678" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[DRIVER_LICENSE_JURISDICTION] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[DRIVER_LICENSE_JURISDICTION] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="142">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2212" y="905" width="768" height="268" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_PUBLIC_PROPERTY_DAMAGE</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="136">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2334" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="PUBLIC_PROPERTY_DAMAGE_TYPE" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="137">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2237" y="955" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PUBLIC_PROPERTY_DAMAGE_TYPE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="138">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2561" y="955" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="139">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2693" y="955" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>PUBLIC_PROPERTY_DAMAGE_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="140">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2849" y="955" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_a3b5798ddaa7764d852e621de604e31d~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="141">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2849" y="1027" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_PUBLIC_PROPERTY_DAMAGE</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="PUBLIC_PROPERTY_DAMAGE_SK" Dest="PUBLIC_PROPERTY_DAMAGE_SK" />
+                    <Field Source="PUBLIC_PROPERTY_DAMAGE_TYPE" Dest="PUBLIC_PROPERTY_DAMAGE" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_PUBLIC_PROPERTY_DAMAGE</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="181">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2454" y="966" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[PUBLIC_PROPERTY_DAMAGE_TYPE] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[PUBLIC_PROPERTY_DAMAGE_TYPE] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="149">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2212" y="1181" width="767" height="268" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_DRIVER_LICENSE_STATUS</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="143">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2346" y="1230" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="DRIVER_LICENSE_STATUS" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="144">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2237" y="1231" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="DRIVER_LICENSE_STATUS" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="145">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2561" y="1231" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="146">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2693" y="1231" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>DRIVER_LICENSE_STATUS_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="147">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2849" y="1231" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\raoak\AppData\Local\Temp\Engine_30468_2a4452d9ca01744cba3fc1c279c4d7ef_\Engine_30468_54307dcdfe360745955a5f4932999b40~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="148">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2849" y="1303" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||Dim_DRIVER_LICENSE_STATUS</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="DRIVER_LICENSE_STATUS_SK" Dest="DRIVER_LICENSE_STATUS_SK" />
+                    <Field Source="DRIVER_LICENSE_STATUS" Dest="DRIVER_LICENSE_STATUS" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=Dim_DRIVER_LICENSE_STATUS</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="182">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2466" y="1230" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[DRIVER_LICENSE_STATUS] != "NO VALUE PROVIDED"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[DRIVER_LICENSE_STATUS] != "NO VALUE PROVIDED"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="168" Connection="Output" />
+      <Destination ToolID="169" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="169" Connection="Output" />
+      <Destination ToolID="184" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="184" Connection="Output" />
+      <Destination ToolID="185" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="185" Connection="Output" />
+      <Destination ToolID="183" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="166" Connection="True" />
+      <Destination ToolID="152" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="159" Connection="Output" />
+      <Destination ToolID="160" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Unique" />
+      <Destination ToolID="166" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="153" Connection="Output" />
+      <Destination ToolID="156" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="153" Connection="Output" />
+      <Destination ToolID="154" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="152" Connection="Output" />
+      <Destination ToolID="153" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="116" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="123" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="130" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="137" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="159" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="103" Connection="Output" />
+      <Destination ToolID="105" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Unique" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="172" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="172" Connection="True" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Unique" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="173" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="96" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="173" Connection="True" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Unique" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="174" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="102" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="True" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Unique" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="175" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="97" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="175" Connection="True" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Unique" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="176" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="176" Connection="True" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="104" Connection="Unique" />
+      <Destination ToolID="106" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="104" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="106" Connection="Output" />
+      <Destination ToolID="177" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="108" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="110" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="True" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="115" Connection="Unique" />
+      <Destination ToolID="178" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="116" Connection="Output" />
+      <Destination ToolID="115" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="117" Connection="Output" />
+      <Destination ToolID="118" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="118" Connection="Output" />
+      <Destination ToolID="119" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="118" Connection="Output" />
+      <Destination ToolID="120" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="178" Connection="True" />
+      <Destination ToolID="117" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="Unique" />
+      <Destination ToolID="179" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="125" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Output" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Output" />
+      <Destination ToolID="127" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="179" Connection="True" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Unique" />
+      <Destination ToolID="180" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="130" Connection="Output" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="131" Connection="Output" />
+      <Destination ToolID="132" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="132" Connection="Output" />
+      <Destination ToolID="133" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="132" Connection="Output" />
+      <Destination ToolID="134" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="180" Connection="True" />
+      <Destination ToolID="131" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="136" Connection="Unique" />
+      <Destination ToolID="181" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="137" Connection="Output" />
+      <Destination ToolID="136" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="Output" />
+      <Destination ToolID="139" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="139" Connection="Output" />
+      <Destination ToolID="140" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="139" Connection="Output" />
+      <Destination ToolID="141" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="181" Connection="True" />
+      <Destination ToolID="138" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="143" Connection="Unique" />
+      <Destination ToolID="182" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="144" Connection="Output" />
+      <Destination ToolID="143" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="Output" />
+      <Destination ToolID="146" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="146" Connection="Output" />
+      <Destination ToolID="147" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="146" Connection="Output" />
+      <Destination ToolID="148" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="182" Connection="True" />
+      <Destination ToolID="145" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>DIM_NYC_MV_Collisions</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="5122915f-a81d-42e9-8eec-4956e982a0d9" />
+      <Telemetry>
+        <PreviousWorkflowId value="5b9a07a3-304e-48f6-9921-b1eb6471aa3d" />
+        <OriginWorkflowId value="75b2cad6-b21e-4057-8a0e-f3ad6fe15b16" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

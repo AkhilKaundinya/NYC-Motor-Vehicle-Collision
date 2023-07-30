@@ -1,0 +1,2806 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="29" y="29" width="1556" height="483" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 72</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="47">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="54" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select stg_nyc_mv_collision_persons.* 
+from stg_nyc_mv_collision_persons</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select stg_nyc_mv_collision_...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="UNIQUE_ID" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="Int64" />
+                <Field name="COLLISION_ID" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="Int64" />
+                <Field name="CRASH_DATE" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="CRASH_TIME" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PERSON_ID" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PERSON_TYPE" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PERSON_INJURY" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="VEHICLE_ID" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PERSON_AGE" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="Int32" />
+                <Field name="EJECTION" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="EMOTIONAL_STATUS" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="BODILY_INJURY" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="POSITION_IN_VEHICLE" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="SAFETY_EQUIPMENT" size="400" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PED_LOCATION" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PED_ACTION" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="COMPLAINT" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PED_ROLE" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="CONTRIBUTING_FACTOR_1" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="CONTRIBUTING_FACTOR_2" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="PERSON_SEX" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="V_String" />
+                <Field name="CRASH_DATE_1" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="Date" />
+                <Field name="crash_time_1" size="8" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_persons.* &#xA;from stg_nyc_mv_collision_persons" type="String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="77" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_PED_ROLE.* 
+from Dim_PED_ROLE</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_PED_ROLE.* 
+from...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PED_ROLE_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PED_ROLE.* &#xA;from Dim_PED_ROLE" type="Int32" />
+                <Field name="PED_ROLE" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PED_ROLE.* &#xA;from Dim_PED_ROLE" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PED_ROLE.* &#xA;from Dim_PED_ROLE" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PED_ROLE.* &#xA;from Dim_PED_ROLE" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="49">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="246" y="233" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_PERSON_TYPE.* 
+from Dim_PERSON_TYPE</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_PERSON_TYPE.* 
+f...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PERSON_TYPE_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_TYPE.* &#xA;from Dim_PERSON_TYPE" type="Int32" />
+                <Field name="PERSON_TYPE" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_TYPE.* &#xA;from Dim_PERSON_TYPE" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_TYPE.* &#xA;from Dim_PERSON_TYPE" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_TYPE.* &#xA;from Dim_PERSON_TYPE" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="378" y="306" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_PERSON_INJURY.* 
+from Dim_PERSON_INJURY</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_PERSON_INJURY.*...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PERSON_INJURY_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_INJURY.* &#xA;from Dim_PERSON_INJURY" type="Int32" />
+                <Field name="PERSON_INJURY" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_INJURY.* &#xA;from Dim_PERSON_INJURY" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_INJURY.* &#xA;from Dim_PERSON_INJURY" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_INJURY.* &#xA;from Dim_PERSON_INJURY" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="522" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_EMOTIONAL_STATUS.* 
+from Dim_EMOTIONAL_STATUS</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_EMOTIONAL_STATUS....</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="EMOTIONAL_STATUS_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_EMOTIONAL_STATUS.* &#xA;from Dim_EMOTIONAL_STATUS" type="Int32" />
+                <Field name="EMOTIONAL_STATUS" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_EMOTIONAL_STATUS.* &#xA;from Dim_EMOTIONAL_STATUS" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_EMOTIONAL_STATUS.* &#xA;from Dim_EMOTIONAL_STATUS" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_EMOTIONAL_STATUS.* &#xA;from Dim_EMOTIONAL_STATUS" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="642" y="221" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_PERSON_SEX.* 
+from Dim_PERSON_SEX</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_PERSON_SEX.* 
+fr...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PERSON_SEX_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_SEX.* &#xA;from Dim_PERSON_SEX" type="Int32" />
+                <Field name="PERSON_SEX" size="10" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_SEX.* &#xA;from Dim_PERSON_SEX" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_SEX.* &#xA;from Dim_PERSON_SEX" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_SEX.* &#xA;from Dim_PERSON_SEX" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="774" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_CONTRIBUTING_FACTOR.* 
+from Dim_CONTRIBUTING_FACTOR</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_CONTRIBUTING_FACT...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="CONTRIBUTING_FACTOR_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_CONTRIBUTING_FACTOR.* &#xA;from Dim_CONTRIBUTING_FACTOR" type="Int32" />
+                <Field name="CONTRIBUTING_FACTOR" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_CONTRIBUTING_FACTOR.* &#xA;from Dim_CONTRIBUTING_FACTOR" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_CONTRIBUTING_FACTOR.* &#xA;from Dim_CONTRIBUTING_FACTOR" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_CONTRIBUTING_FACTOR.* &#xA;from Dim_CONTRIBUTING_FACTOR" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="306" y="89" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="PED_ROLE" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="PED_ROLE" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_UNIQUE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_COLLISION_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_TIME" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_TYPE" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_INJURY" selected="True" input="Left_" />
+                    <SelectField field="Left_VEHICLE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_AGE" selected="True" input="Left_" />
+                    <SelectField field="Left_EMOTIONAL_STATUS" selected="True" input="Left_" />
+                    <SelectField field="Left_BODILY_INJURY" selected="True" input="Left_" />
+                    <SelectField field="Left_PED_ROLE" selected="True" input="Left_" />
+                    <SelectField field="Left_CONTRIBUTING_FACTOR_1" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_SEX" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE_1" selected="True" input="Left_" />
+                    <SelectField field="Left_crash_time_1" selected="True" input="Left_" />
+                    <SelectField field="Right_PED_ROLE_SK" selected="True" input="Right_" />
+                    <SelectField field="Right_PED_ROLE" selected="False" rename="Right_PED_ROLE" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="56">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="174" y="197" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PED_ROLE_SK" selected="True" />
+                <SelectField field="PED_ROLE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="57">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="437" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="PERSON_TYPE" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="PERSON_TYPE" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_UNIQUE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_COLLISION_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_TIME" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_TYPE" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_INJURY" selected="True" input="Left_" />
+                    <SelectField field="Left_VEHICLE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_AGE" selected="True" input="Left_" />
+                    <SelectField field="Left_EMOTIONAL_STATUS" selected="True" input="Left_" />
+                    <SelectField field="Left_BODILY_INJURY" selected="True" input="Left_" />
+                    <SelectField field="Left_PED_ROLE" selected="True" input="Left_" />
+                    <SelectField field="Left_CONTRIBUTING_FACTOR_1" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_SEX" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE_1" selected="True" input="Left_" />
+                    <SelectField field="Left_crash_time_1" selected="True" input="Left_" />
+                    <SelectField field="Left_PED_ROLE_SK" selected="True" input="Left_" />
+                    <SelectField field="Left_Right_PED_ROLE" selected="True" input="Left_" />
+                    <SelectField field="Right_PERSON_TYPE_SK" selected="True" input="Right_" />
+                    <SelectField field="Right_PERSON_TYPE" selected="False" rename="Right_PERSON_TYPE" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="58">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="330" y="233" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PERSON_TYPE_SK" selected="True" />
+                <SelectField field="PERSON_TYPE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="59">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="558" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="PERSON_INJURY" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="PERSON_INJURY" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_UNIQUE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_COLLISION_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_TIME" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_TYPE" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_INJURY" selected="True" input="Left_" />
+                    <SelectField field="Left_VEHICLE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_AGE" selected="True" input="Left_" />
+                    <SelectField field="Left_EMOTIONAL_STATUS" selected="True" input="Left_" />
+                    <SelectField field="Left_BODILY_INJURY" selected="True" input="Left_" />
+                    <SelectField field="Left_PED_ROLE" selected="True" input="Left_" />
+                    <SelectField field="Left_CONTRIBUTING_FACTOR_1" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_SEX" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE_1" selected="True" input="Left_" />
+                    <SelectField field="Left_crash_time_1" selected="True" input="Left_" />
+                    <SelectField field="Left_PED_ROLE_SK" selected="True" input="Left_" />
+                    <SelectField field="Left_Right_PED_ROLE" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_TYPE_SK" selected="True" input="Left_" />
+                    <SelectField field="Left_Right_PERSON_TYPE" selected="True" input="Left_" />
+                    <SelectField field="Right_PERSON_INJURY_SK" selected="True" input="Right_" />
+                    <SelectField field="Right_PERSON_INJURY" selected="False" rename="Right_PERSON_INJURY" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="60">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="486" y="305" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PERSON_INJURY_SK" selected="True" />
+                <SelectField field="PERSON_INJURY" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="61">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="666" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="EMOTIONAL_STATUS" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="EMOTIONAL_STATUS" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_UNIQUE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_COLLISION_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_TIME" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_TYPE" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_INJURY" selected="True" input="Left_" />
+                    <SelectField field="Left_VEHICLE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_AGE" selected="True" input="Left_" />
+                    <SelectField field="Left_EMOTIONAL_STATUS" selected="True" input="Left_" />
+                    <SelectField field="Left_BODILY_INJURY" selected="True" input="Left_" />
+                    <SelectField field="Left_PED_ROLE" selected="True" input="Left_" />
+                    <SelectField field="Left_CONTRIBUTING_FACTOR_1" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_SEX" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE_1" selected="True" input="Left_" />
+                    <SelectField field="Left_crash_time_1" selected="True" input="Left_" />
+                    <SelectField field="Left_PED_ROLE_SK" selected="True" input="Left_" />
+                    <SelectField field="Left_Right_PED_ROLE" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_TYPE_SK" selected="True" input="Left_" />
+                    <SelectField field="Left_Right_PERSON_TYPE" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_INJURY_SK" selected="True" input="Left_" />
+                    <SelectField field="Right_EMOTIONAL_STATUS_SK" selected="True" input="Right_" />
+                    <SelectField field="Right_EMOTIONAL_STATUS" selected="False" rename="Right_EMOTIONAL_STATUS" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="62">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="618" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="EMOTIONAL_STATUS_SK" selected="True" />
+                <SelectField field="EMOTIONAL_STATUS" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="63">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="774" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="PERSON_SEX" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="PERSON_SEX" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_UNIQUE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_COLLISION_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_TIME" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_TYPE" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_INJURY" selected="True" input="Left_" />
+                    <SelectField field="Left_VEHICLE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_AGE" selected="True" input="Left_" />
+                    <SelectField field="Left_EMOTIONAL_STATUS" selected="True" input="Left_" />
+                    <SelectField field="Left_BODILY_INJURY" selected="True" input="Left_" />
+                    <SelectField field="Left_PED_ROLE" selected="True" input="Left_" />
+                    <SelectField field="Left_CONTRIBUTING_FACTOR_1" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_SEX" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE_1" selected="True" input="Left_" />
+                    <SelectField field="Left_crash_time_1" selected="True" input="Left_" />
+                    <SelectField field="Left_PED_ROLE_SK" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_TYPE_SK" selected="True" input="Left_" />
+                    <SelectField field="Left_PERSON_INJURY_SK" selected="True" input="Left_" />
+                    <SelectField field="Left_EMOTIONAL_STATUS_SK" selected="True" input="Left_" />
+                    <SelectField field="Right_PERSON_SEX_SK" selected="True" input="Right_" />
+                    <SelectField field="Right_PERSON_SEX" selected="False" rename="Right_PERSON_SEX" input="Right_" />
+                    <SelectField field="Left_Right_PED_ROLE" selected="True" input="Left_" />
+                    <SelectField field="Left_Right_PERSON_TYPE" selected="True" input="Left_" />
+                    <SelectField field="Left_Right_EMOTIONAL_STATUS" selected="True" input="Left_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="64">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="726" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PERSON_SEX_SK" selected="True" />
+                <SelectField field="PERSON_SEX" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="65">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="894" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="CONTRIBUTING_FACTOR_1" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="CONTRIBUTING_FACTOR" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="66">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="870" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="CONTRIBUTING_FACTOR_SK" selected="True" />
+                <SelectField field="CONTRIBUTING_FACTOR" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="67">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1002" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="COLLISION_ID" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Collision_Id" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Collision_Id" selected="False" rename="Right_Collision_Id" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="68">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1146" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="69">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="1266" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>PERSON_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="70">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1350" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PERSON_SK" selected="True" />
+                <SelectField field="UNIQUE_ID" selected="True" />
+                <SelectField field="COLLISION_ID" selected="True" />
+                <SelectField field="PERSON_ID" selected="True" />
+                <SelectField field="PERSON_AGE" selected="True" />
+                <SelectField field="PED_ROLE_SK" selected="True" />
+                <SelectField field="PERSON_TYPE_SK" selected="True" />
+                <SelectField field="PERSON_INJURY_SK" selected="True" />
+                <SelectField field="EMOTIONAL_STATUS_SK" selected="True" />
+                <SelectField field="PERSON_SEX_SK" selected="True" />
+                <SelectField field="CONTRIBUTING_FACTOR_SK" selected="True" />
+                <SelectField field="collision_sk" selected="True" />
+                <SelectField field="DI_CreateDate" selected="True" />
+                <SelectField field="DI_PID" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="71">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1458" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||FCT_PERSON_COLLISION</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="PERSON_SK" Dest="PERSON_SK" />
+                    <Field Source="UNIQUE_ID" Dest="UNIQUE_ID" />
+                    <Field Source="COLLISION_ID" Dest="COLLISION_ID" />
+                    <Field Source="PERSON_ID" Dest="PERSON_ID" />
+                    <Field Source="PERSON_AGE" Dest="PERSON_AGE" />
+                    <Field Source="PED_ROLE_SK" Dest="PED_ROLE_SK" />
+                    <Field Source="PERSON_TYPE_SK" Dest="PERSON_TYPE_SK" />
+                    <Field Source="PERSON_INJURY_SK" Dest="PERSON_INJURY_SK" />
+                    <Field Source="EMOTIONAL_STATUS_SK" Dest="EMOTIONAL_STATUS_SK" />
+                    <Field Source="PERSON_SEX_SK" Dest="PERSON_SEX_SK" />
+                    <Field Source="CONTRIBUTING_FACTOR_SK" Dest="CONTRIBUTING_FACTOR_SK" />
+                    <Field Source="collision_sk" Dest="collision_sk" />
+                    <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=FCT_PERSON_COLLISION</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="173" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="UNIQUE_ID" selected="True" />
+                <SelectField field="COLLISION_ID" selected="True" />
+                <SelectField field="CRASH_DATE" selected="True" />
+                <SelectField field="CRASH_TIME" selected="True" />
+                <SelectField field="PERSON_ID" selected="True" />
+                <SelectField field="PERSON_TYPE" selected="True" />
+                <SelectField field="PERSON_INJURY" selected="True" />
+                <SelectField field="VEHICLE_ID" selected="True" />
+                <SelectField field="PERSON_AGE" selected="True" />
+                <SelectField field="EMOTIONAL_STATUS" selected="True" />
+                <SelectField field="BODILY_INJURY" selected="True" />
+                <SelectField field="PED_ROLE" selected="True" />
+                <SelectField field="CONTRIBUTING_FACTOR_1" selected="True" />
+                <SelectField field="PERSON_SEX" selected="True" />
+                <SelectField field="CRASH_DATE_1" selected="True" />
+                <SelectField field="crash_time_1" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="0" y="1301" width="1627" height="519" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 46</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="24" y="1470" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_STATE_REGISTRATION.* 
+from Dim_STATE_REGISTRATION</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_STATE_REGISTRATIO...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="STATE_REGISTRATION_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_STATE_REGISTRATION.* &#xA;from Dim_STATE_REGISTRATION" type="Int32" />
+                <Field name="STATE_REGISTRATION" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_STATE_REGISTRATION.* &#xA;from Dim_STATE_REGISTRATION" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_STATE_REGISTRATION.* &#xA;from Dim_STATE_REGISTRATION" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_STATE_REGISTRATION.* &#xA;from Dim_STATE_REGISTRATION" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="25" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select stg_nyc_mv_collision_vehicles.* 
+from stg_nyc_mv_collision_vehicles</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select stg_nyc_mv_collision_...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="UNIQUE_ID" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="Int64" />
+                <Field name="COLLISION_ID" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="Int64" />
+                <Field name="CRASH_DATE" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="DateTime" />
+                <Field name="CRASH_TIME" size="16" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_ID" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="STATE_REGISTRATION" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_TYPE" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_MAKE" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_MODEL" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_YEAR" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="TRAVEL_DIRECTION" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_OCCUPANTS" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="Int32" />
+                <Field name="DRIVER_SEX" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="DRIVER_LICENSE_STATUS" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="DRIVER_LICENSE_JURISDICTION" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="PRE_CRASH" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="POINT_OF_IMPACT" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_DAMAGE" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_DAMAGE_1" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_DAMAGE_2" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="VEHICLE_DAMAGE_3" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="PUBLIC_PROPERTY_DAMAGE" size="1024" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="PUBLIC_PROPERTY_DAMAGE_TYPE" size="1024" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="CONTRIBUTING_FACTOR_1" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="CONTRIBUTING_FACTOR_2" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collision_vehicles.* &#xA;from stg_nyc_mv_collision_vehicles" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="229" y="1518" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_VEHICLE_TYPE.* 
+from Dim_VEHICLE_TYPE</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_VEHICLE_TYPE.*...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="VEHICLE_TYPE_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_VEHICLE_TYPE.* &#xA;from Dim_VEHICLE_TYPE" type="Int32" />
+                <Field name="VEHICLE_TYPE" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_VEHICLE_TYPE.* &#xA;from Dim_VEHICLE_TYPE" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_VEHICLE_TYPE.* &#xA;from Dim_VEHICLE_TYPE" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_VEHICLE_TYPE.* &#xA;from Dim_VEHICLE_TYPE" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="301" y="1614" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_DRIVER_LICENSE_JURISDICTION.* 
+from Dim_DRIVER_LICENSE_JURISDICTION</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_DRIVER_LICENSE_JU...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="DRIVER_LICENSE_JURISDICTION_SK" source="File: aka:NYC_CRASH|||select Dim_DRIVER_LICENSE_JURISDICTION.* &#xA;from Dim_DRIVER_LICENSE_JURISDICTION" type="Int32" />
+                <Field name="DRIVER_LICENSE_JURISDICTION" size="255" source="File: aka:NYC_CRASH|||select Dim_DRIVER_LICENSE_JURISDICTION.* &#xA;from Dim_DRIVER_LICENSE_JURISDICTION" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: aka:NYC_CRASH|||select Dim_DRIVER_LICENSE_JURISDICTION.* &#xA;from Dim_DRIVER_LICENSE_JURISDICTION" type="V_String" />
+                <Field name="DI_Create_Date" source="File: aka:NYC_CRASH|||select Dim_DRIVER_LICENSE_JURISDICTION.* &#xA;from Dim_DRIVER_LICENSE_JURISDICTION" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="409" y="1674" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_PUBLIC_PROPERTY_DAMAGE.* 
+from Dim_PUBLIC_PROPERTY_DAMAGE</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_PUBLIC_PROPERTY_D...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PUBLIC_PROPERTY_DAMAGE_SK" source="File: aka:NYC_CRASH|||select Dim_PUBLIC_PROPERTY_DAMAGE.* &#xA;from Dim_PUBLIC_PROPERTY_DAMAGE" type="Int32" />
+                <Field name="PUBLIC_PROPERTY_DAMAGE" size="255" source="File: aka:NYC_CRASH|||select Dim_PUBLIC_PROPERTY_DAMAGE.* &#xA;from Dim_PUBLIC_PROPERTY_DAMAGE" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: aka:NYC_CRASH|||select Dim_PUBLIC_PROPERTY_DAMAGE.* &#xA;from Dim_PUBLIC_PROPERTY_DAMAGE" type="V_String" />
+                <Field name="DI_Create_Date" source="File: aka:NYC_CRASH|||select Dim_PUBLIC_PROPERTY_DAMAGE.* &#xA;from Dim_PUBLIC_PROPERTY_DAMAGE" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="565" y="1482" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_DRIVER_LICENSE_STATUS.* 
+from Dim_DRIVER_LICENSE_STATUS</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_DRIVER_LICENSE_ST...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="DRIVER_LICENSE_STATUS_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_DRIVER_LICENSE_STATUS.* &#xA;from Dim_DRIVER_LICENSE_STATUS" type="Int32" />
+                <Field name="DRIVER_LICENSE_STATUS" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_DRIVER_LICENSE_STATUS.* &#xA;from Dim_DRIVER_LICENSE_STATUS" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_DRIVER_LICENSE_STATUS.* &#xA;from Dim_DRIVER_LICENSE_STATUS" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_DRIVER_LICENSE_STATUS.* &#xA;from Dim_DRIVER_LICENSE_STATUS" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="709" y="1554" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_CONTRIBUTING_FACTOR.* 
+from Dim_CONTRIBUTING_FACTOR</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_CONTRIBUTING_FACT...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="CONTRIBUTING_FACTOR_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_CONTRIBUTING_FACTOR.* &#xA;from Dim_CONTRIBUTING_FACTOR" type="Int32" />
+                <Field name="CONTRIBUTING_FACTOR" size="255" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_CONTRIBUTING_FACTOR.* &#xA;from Dim_CONTRIBUTING_FACTOR" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_CONTRIBUTING_FACTOR.* &#xA;from Dim_CONTRIBUTING_FACTOR" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_CONTRIBUTING_FACTOR.* &#xA;from Dim_CONTRIBUTING_FACTOR" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="841" y="1638" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select Dim_PERSON_SEX.* 
+from Dim_PERSON_SEX</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select Dim_PERSON_SEX.* 
+fr...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="PERSON_SEX_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_SEX.* &#xA;from Dim_PERSON_SEX" type="Int32" />
+                <Field name="PERSON_SEX" size="10" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_SEX.* &#xA;from Dim_PERSON_SEX" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_SEX.* &#xA;from Dim_PERSON_SEX" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select Dim_PERSON_SEX.* &#xA;from Dim_PERSON_SEX" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="157" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="UNIQUE_ID" selected="True" />
+                <SelectField field="COLLISION_ID" selected="True" />
+                <SelectField field="CRASH_DATE" selected="True" />
+                <SelectField field="CRASH_TIME" selected="True" />
+                <SelectField field="VEHICLE_ID" selected="True" />
+                <SelectField field="STATE_REGISTRATION" selected="True" />
+                <SelectField field="VEHICLE_TYPE" selected="True" />
+                <SelectField field="VEHICLE_YEAR" selected="True" />
+                <SelectField field="VEHICLE_OCCUPANTS" selected="True" />
+                <SelectField field="DRIVER_SEX" selected="True" />
+                <SelectField field="DRIVER_LICENSE_STATUS" selected="True" />
+                <SelectField field="DRIVER_LICENSE_JURISDICTION" selected="True" />
+                <SelectField field="PRE_CRASH" selected="True" />
+                <SelectField field="POINT_OF_IMPACT" selected="True" />
+                <SelectField field="PUBLIC_PROPERTY_DAMAGE" selected="True" />
+                <SelectField field="CONTRIBUTING_FACTOR_1" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="289" y="1362" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="STATE_REGISTRATION" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="STATE_REGISTRATION" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_UNIQUE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_COLLISION_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_DATE" selected="True" input="Left_" />
+                    <SelectField field="Left_CRASH_TIME" selected="True" input="Left_" />
+                    <SelectField field="Left_VEHICLE_ID" selected="True" input="Left_" />
+                    <SelectField field="Left_STATE_REGISTRATION" selected="True" input="Left_" />
+                    <SelectField field="Left_VEHICLE_TYPE" selected="True" input="Left_" />
+                    <SelectField field="Left_VEHICLE_YEAR" selected="True" input="Left_" />
+                    <SelectField field="Left_VEHICLE_OCCUPANTS" selected="True" input="Left_" />
+                    <SelectField field="Left_DRIVER_SEX" selected="True" input="Left_" />
+                    <SelectField field="Left_DRIVER_LICENSE_STATUS" selected="True" input="Left_" />
+                    <SelectField field="Left_DRIVER_LICENSE_JURISDICTION" selected="True" input="Left_" />
+                    <SelectField field="Left_PRE_CRASH" selected="True" input="Left_" />
+                    <SelectField field="Left_POINT_OF_IMPACT" selected="True" input="Left_" />
+                    <SelectField field="Left_PUBLIC_PROPERTY_DAMAGE" selected="True" input="Left_" />
+                    <SelectField field="Left_CONTRIBUTING_FACTOR_1" selected="True" input="Left_" />
+                    <SelectField field="Right_STATE_REGISTRATION_SK" selected="True" input="Right_" />
+                    <SelectField field="Right_STATE_REGISTRATION" selected="False" rename="Right_STATE_REGISTRATION" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="132" y="1470" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="STATE_REGISTRATION_SK" selected="True" />
+                <SelectField field="STATE_REGISTRATION" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="433" y="1374" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="VEHICLE_TYPE" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="VEHICLE_TYPE" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_VEHICLE_TYPE" selected="True" rename="Right_VEHICLE_TYPE" input="Right_" />
+                    <SelectField field="Right_DI_PID" selected="True" rename="Right_DI_PID" input="Right_" />
+                    <SelectField field="Right_DI_Create_Date" selected="True" rename="Right_DI_Create_Date" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="541" y="1386" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="DRIVER_LICENSE_JURISDICTION" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="DRIVER_LICENSE_JURISDICTION" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_DRIVER_LICENSE_JURISDICTION" selected="True" rename="Right_DRIVER_LICENSE_JURISDICTION" input="Right_" />
+                    <SelectField field="Right_DI_PID" selected="True" rename="Right_DI_PID" input="Right_" />
+                    <SelectField field="Right_DI_Create_Date" selected="True" rename="Right_DI_Create_Date" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="685" y="1398" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="PUBLIC_PROPERTY_DAMAGE" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="PUBLIC_PROPERTY_DAMAGE" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_PUBLIC_PROPERTY_DAMAGE" selected="True" rename="Right_PUBLIC_PROPERTY_DAMAGE" input="Right_" />
+                    <SelectField field="Right_DI_PID" selected="True" rename="Right_DI_PID" input="Right_" />
+                    <SelectField field="Right_DI_Create_Date" selected="True" rename="Right_DI_Create_Date" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="769" y="1410" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="DRIVER_LICENSE_STATUS" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="DRIVER_LICENSE_STATUS" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_DRIVER_LICENSE_STATUS" selected="True" rename="Right_DRIVER_LICENSE_STATUS" input="Right_" />
+                    <SelectField field="Right_DI_PID" selected="True" rename="Right_DI_PID" input="Right_" />
+                    <SelectField field="Right_DI_Create_Date" selected="True" rename="Right_DI_Create_Date" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="877" y="1422" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="CONTRIBUTING_FACTOR_1" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="CONTRIBUTING_FACTOR" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1009" y="1434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="DRIVER_SEX" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="PERSON_SEX" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="793" y="1554" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="CONTRIBUTING_FACTOR_SK" selected="True" />
+                <SelectField field="CONTRIBUTING_FACTOR" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="913" y="1638" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PERSON_SEX_SK" selected="True" />
+                <SelectField field="PERSON_SEX" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="337" y="1518" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="VEHICLE_TYPE_SK" selected="True" />
+                <SelectField field="VEHICLE_TYPE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="445" y="1614" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="DRIVER_LICENSE_JURISDICTION_SK" selected="True" />
+                <SelectField field="DRIVER_LICENSE_JURISDICTION" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="577" y="1674" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PUBLIC_PROPERTY_DAMAGE_SK" selected="True" />
+                <SelectField field="PUBLIC_PROPERTY_DAMAGE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="661" y="1482" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="DRIVER_LICENSE_STATUS_SK" selected="True" />
+                <SelectField field="DRIVER_LICENSE_STATUS" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1237" y="1434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="42">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1153" y="1434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Collision_Id" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="COLLISION_ID" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_COLLISION_ID" selected="True" rename="Right_COLLISION_ID" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1393" y="1434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="vehicle_sk" selected="True" />
+                <SelectField field="collision_sk" selected="True" />
+                <SelectField field="Collision_Id" selected="True" />
+                <SelectField field="DI_CreateDate" selected="True" />
+                <SelectField field="DI_PID" selected="True" />
+                <SelectField field="UNIQUE_ID" selected="True" />
+                <SelectField field="VEHICLE_ID" selected="True" />
+                <SelectField field="VEHICLE_YEAR" selected="True" />
+                <SelectField field="VEHICLE_OCCUPANTS" selected="True" />
+                <SelectField field="STATE_REGISTRATION_SK" selected="True" />
+                <SelectField field="VEHICLE_TYPE_SK" selected="True" />
+                <SelectField field="DRIVER_LICENSE_JURISDICTION_SK" selected="True" />
+                <SelectField field="PUBLIC_PROPERTY_DAMAGE_SK" selected="True" />
+                <SelectField field="DRIVER_LICENSE_STATUS_SK" selected="True" />
+                <SelectField field="CONTRIBUTING_FACTOR_SK" selected="True" />
+                <SelectField field="PERSON_SEX_SK" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="1321" y="1434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>vehicle_sk</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="45">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1501" y="1434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||FCT_VEHICLE_COLLISION</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Upsert</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="vehicle_sk" Dest="VEHICLE_SK" />
+                    <Field Source="collision_sk" Dest="collision_sk" />
+                    <Field Source="Collision_Id" Dest="COLLISION_ID" />
+                    <Field Source="DI_CreateDate" Dest="DI_CREATE_DATE" />
+                    <Field Source="DI_PID" Dest="DI_PID" />
+                    <Field Source="UNIQUE_ID" Dest="UNIQUE_ID" />
+                    <Field Source="VEHICLE_ID" Dest="VEHICLE_ID" />
+                    <Field Source="VEHICLE_YEAR" Dest="VEHICLE_YEAR" />
+                    <Field Source="VEHICLE_OCCUPANTS" Dest="VEHICLE_OCCUPANTS" />
+                    <Field Source="STATE_REGISTRATION_SK" Dest="STATE_REGISTRATION_SK" />
+                    <Field Source="VEHICLE_TYPE_SK" Dest="VEHICLE_TYPE_SK" />
+                    <Field Source="DRIVER_LICENSE_JURISDICTION_SK" Dest="DRIVER_LICENSE_JURISDICTION_SK" />
+                    <Field Source="PUBLIC_PROPERTY_DAMAGE_SK" Dest="PUBLIC_PROPERTY_DAMAGE_SK" />
+                    <Field Source="DRIVER_LICENSE_STATUS_SK" Dest="DRIVER_LICENSE_STATUS_SK" />
+                    <Field Source="CONTRIBUTING_FACTOR_SK" Dest="CONTRIBUTING_FACTOR_SK" />
+                    <Field Source="PERSON_SEX_SK" Dest="PERSON_SEX_SK" />
+                  </AppendMapping>
+                </AppendMap>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=FCT_VEHICLE_COLLISION</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="65" y="713" width="1165" height="471" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 15</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="101" y="906" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select DIM_Borough.* 
+from DIM_Borough</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select DIM_Borough.* 
+from...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="borough_sk" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DIM_Borough.* &#xA;from DIM_Borough" type="Int32" />
+                <Field name="Borough" size="80" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DIM_Borough.* &#xA;from DIM_Borough" type="V_String" />
+                <Field name="DI_PID" size="20" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DIM_Borough.* &#xA;from DIM_Borough" type="V_String" />
+                <Field name="DI_Create_Date" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DIM_Borough.* &#xA;from DIM_Borough" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="89" y="1038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select DimDate.* 
+from DimDate</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select DimDate.* 
+from DimD...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date_SK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DimDate.* &#xA;from DimDate" type="Int32" />
+                <Field name="Date_AK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DimDate.* &#xA;from DimDate" type="Date" />
+                <Field name="DayName" size="15" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DimDate.* &#xA;from DimDate" type="String" />
+                <Field name="DayOfYear" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DimDate.* &#xA;from DimDate" type="Int32" />
+                <Field name="Month" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DimDate.* &#xA;from DimDate" type="Int32" />
+                <Field name="MonthName" size="15" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DimDate.* &#xA;from DimDate" type="String" />
+                <Field name="Quarter" size="10" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DimDate.* &#xA;from DimDate" type="V_String" />
+                <Field name="Year" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DimDate.* &#xA;from DimDate" type="Int32" />
+                <Field name="MMYY" size="10" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select DimDate.* &#xA;from DimDate" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="198" y="906" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="borough_sk" selected="True" />
+                <SelectField field="Borough" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="174" y="1038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Date_SK" selected="True" />
+                <SelectField field="Date_AK" selected="True" type="String" size="16384" />
+                <SelectField field="DayName" selected="True" />
+                <SelectField field="DayOfYear" selected="True" />
+                <SelectField field="Month" selected="True" />
+                <SelectField field="MonthName" selected="True" />
+                <SelectField field="Quarter" selected="True" />
+                <SelectField field="Year" selected="True" />
+                <SelectField field="MMYY" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="90" y="762" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File FileFormat="23" RecordLimit="">aka:NYC_CRASH|||select stg_nyc_mv_collisions_BigQuery.* 
+from stg_nyc_mv_collisions_BigQuery</File>
+              <FormatSpecificOptions>
+                <SingleRowFetch>False</SingleRowFetch>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <CacheData>False</CacheData>
+                <SessionReadOnly>True</SessionReadOnly>
+                <ReadUncommitted>False</ReadUncommitted>
+                <NoProgress>True</NoProgress>
+                <PostSQL />
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <PreSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:NYC_CRASH
+Query=select stg_nyc_mv_collisions...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Collision_Id" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int64" />
+                <Field name="Collision_dt" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Date" />
+                <Field name="Collision_day" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="Collision_time" size="100" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="String" />
+                <Field name="Collision_hour" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="Collision_dayoftheweek" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="borough" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="contributing_factor_vehicle_1" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="contributing_factor_vehicle_2" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="contributing_factor_vehicle_3" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="contributing_factor_vehicle_4" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="contributing_factor_vehicle_5" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="cross_street_name" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="latitude" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Double" />
+                <Field name="longitude" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Double" />
+                <Field name="location" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="number_of_cyclist_injured" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="number_of_cyclist_killed" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="number_of_motorist_injured" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="number_of_motorist_killed" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="number_of_pedestrians_injured" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="number_of_pedestrians_killed" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="number_of_persons_injured" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="number_of_persons_killed" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="Int16" />
+                <Field name="off_street_name" size="256" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="on_street_name" size="246" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="vehicle_type_code1" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="vehicle_type_code2" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="vehicle_type_code_3" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="vehicle_type_code_4" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="vehicle_type_code_5" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+                <Field name="zip_code" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=NYC_Crash;SERVER=localhost;Trusted_Connection=yes|||select stg_nyc_mv_collisions_BigQuery.* &#xA;from stg_nyc_mv_collisions_BigQuery" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="197" y="762" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="COLLISION_ID" selected="True" />
+                <SelectField field="collision_dt" selected="True" />
+                <SelectField field="collision_day" selected="True" />
+                <SelectField field="collision_time" selected="True" />
+                <SelectField field="collision_hour" selected="True" />
+                <SelectField field="collision_dayoftheweek" selected="True" />
+                <SelectField field="borough" selected="True" />
+                <SelectField field="zip_code" selected="True" />
+                <SelectField field="off_street_name" selected="True" />
+                <SelectField field="on_street_name" selected="True" />
+                <SelectField field="cross_street_name" selected="True" />
+                <SelectField field="latitude" selected="True" />
+                <SelectField field="longitude" selected="True" />
+                <SelectField field="location" selected="True" />
+                <SelectField field="contributing_factor_vehicle_1" selected="True" />
+                <SelectField field="contributing_factor_vehicle_2" selected="True" />
+                <SelectField field="contributing_factor_vehicle_3" selected="True" />
+                <SelectField field="contributing_factor_vehicle_4" selected="True" />
+                <SelectField field="contributing_factor_vehicle_5" selected="True" />
+                <SelectField field="number_of_cyclist_injured" selected="True" />
+                <SelectField field="number_of_cyclist_killed" selected="True" />
+                <SelectField field="number_of_motorist_injured" selected="True" />
+                <SelectField field="number_of_motorist_killed" selected="True" />
+                <SelectField field="number_of_pedestrians_injured" selected="True" />
+                <SelectField field="number_of_pedestrians_killed" selected="True" />
+                <SelectField field="number_of_persons_injured" selected="True" />
+                <SelectField field="number_of_persons_killed" selected="True" />
+                <SelectField field="vehicle_type_code1" selected="True" />
+                <SelectField field="vehicle_type_code2" selected="True" />
+                <SelectField field="vehicle_type_code_3" selected="True" />
+                <SelectField field="vehicle_type_code_4" selected="True" />
+                <SelectField field="vehicle_type_code_5" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="330" y="774" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="borough" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Borough" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Borough" selected="True" rename="Right_Borough" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="522" y="786" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="collision_dt" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Date_AK" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+            <Position x="281" y="1038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <IsFrom value="False" />
+              <InputFieldName>Date_AK</InputFieldName>
+              <Language>English</Language>
+              <Format>yyyy-MM-dd</Format>
+              <OutputFieldName>DateTime_Out</OutputFieldName>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Convert Date_AK From:
+yyyy-MM-dd</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="366" y="1038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Date_AK" selected="True" type="Date" size="10" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="642" y="786" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="19" type="DateTime" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_PID" size="20" type="V_String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[DI_CreateDate = DateTimeNow()
+DI_PID = [Engine.WorkflowFileName]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="846" y="786" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="collision_sk" selected="True" />
+                <SelectField field="COLLISION_ID" selected="True" />
+                <SelectField field="collision_dt" selected="True" />
+                <SelectField field="collision_day" selected="True" />
+                <SelectField field="collision_time" selected="True" />
+                <SelectField field="collision_hour" selected="True" />
+                <SelectField field="collision_dayoftheweek" selected="True" />
+                <SelectField field="on_street_name" selected="True" />
+                <SelectField field="number_of_cyclist_injured" selected="True" />
+                <SelectField field="number_of_cyclist_killed" selected="True" />
+                <SelectField field="number_of_motorist_injured" selected="True" />
+                <SelectField field="number_of_motorist_killed" selected="True" />
+                <SelectField field="number_of_pedestrians_injured" selected="True" />
+                <SelectField field="number_of_pedestrians_killed" selected="True" />
+                <SelectField field="number_of_persons_injured" selected="True" />
+                <SelectField field="number_of_persons_killed" selected="True" />
+                <SelectField field="borough_sk" selected="True" />
+                <SelectField field="Date_SK" selected="True" />
+                <SelectField field="DI_CreateDate" selected="True" />
+                <SelectField field="DI_PID" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="738" y="786" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>collision_sk</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="1049" y="833" width="156" height="180" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Container 16</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="True" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="14">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+                <Position x="1074" y="882" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <File MaxRecords="" FileFormat="23">aka:NYC_CRASH|||FCT_COLLISION_CRASHES</File>
+                  <Passwords />
+                  <CachedCosmeticName />
+                  <Disable>False</Disable>
+                  <FormatSpecificOptions>
+                    <TransactionMessages>False</TransactionMessages>
+                    <Geometry>True</Geometry>
+                    <Projection />
+                    <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                    <SpatialObjSize>8000</SpatialObjSize>
+                    <OutputOption>Upsert</OutputOption>
+                    <AppendMap>
+                      <AppendMapping mode="Custom">
+                        <Field Source="collision_sk" Dest="collision_sk" />
+                        <Field Source="COLLISION_ID" Dest="collision_id" />
+                        <Field Source="collision_dt" Dest="collision_dt" />
+                        <Field Source="collision_day" Dest="collision_day" />
+                        <Field Source="collision_time" Dest="collision_time" />
+                        <Field Source="collision_hour" Dest="collision_hour" />
+                        <Field Source="collision_dayoftheweek" Dest="collision_dayoftheweek" />
+                        <Field Source="on_street_name" Dest="on_street_name" />
+                        <Field Source="number_of_cyclist_injured" Dest="number_of_cyclist_injured" />
+                        <Field Source="number_of_cyclist_killed" Dest="number_of_cyclist_killed" />
+                        <Field Source="number_of_motorist_injured" Dest="number_of_motorist_injured" />
+                        <Field Source="number_of_motorist_killed" Dest="number_of_motorist_killed" />
+                        <Field Source="number_of_pedestrians_injured" Dest="number_of_pedestrians_injured" />
+                        <Field Source="number_of_pedestrians_killed" Dest="number_of_pedestrians_killed" />
+                        <Field Source="number_of_persons_injured" Dest="number_of_persons_injured" />
+                        <Field Source="number_of_persons_killed" Dest="number_of_persons_killed" />
+                        <Field Source="borough_sk" Dest="borough_sk" />
+                        <Field Source="Date_SK" Dest="collision_dt_sk" />
+                        <Field Source="DI_CreateDate" Dest="DI_Create_Date" />
+                        <Field Source="DI_PID" Dest="DI_PID" />
+                      </AppendMapping>
+                    </AppendMap>
+                    <PostSQL />
+                    <TransactionSize>10000</TransactionSize>
+                    <TableStyle>Quoted</TableStyle>
+                    <PreSQL />
+                  </FormatSpecificOptions>
+                  <MultiFile value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>aka:NYC_CRASH
+Query=FCT_COLLISION_CRASHES</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+                <Dependencies>
+                  <Implicit />
+                </Dependencies>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Join" />
+      <Destination ToolID="57" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="57" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="55" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="55" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Join" />
+      <Destination ToolID="59" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="59" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Join" />
+      <Destination ToolID="61" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="61" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Join" />
+      <Destination ToolID="63" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="63" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Join" />
+      <Destination ToolID="65" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="65" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Join" />
+      <Destination ToolID="67" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="67" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Join" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="27" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="27" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Join" />
+      <Destination ToolID="29" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="29" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Join" />
+      <Destination ToolID="30" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="30" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Join" />
+      <Destination ToolID="31" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="31" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Join" />
+      <Destination ToolID="32" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="32" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Join" />
+      <Destination ToolID="33" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="33" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Join" />
+      <Destination ToolID="34" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="34" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Join" />
+      <Destination ToolID="42" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="42" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Join" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="7" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Join" />
+      <Destination ToolID="8" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="8" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Join" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>FCT_loading</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="af02f815-071b-4959-ae34-369ad3670b9c" />
+      <Telemetry>
+        <PreviousWorkflowId value="55586c6e-f8c7-4ed3-9b0e-8561e67af2dd" />
+        <OriginWorkflowId value="55586c6e-f8c7-4ed3-9b0e-8561e67af2dd" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
