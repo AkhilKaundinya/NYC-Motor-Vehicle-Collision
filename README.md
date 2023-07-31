@@ -1,14 +1,32 @@
 ## Problem Statement
 ### Introduction
-Sentiment analysis is the Machine learning process used for classifying text data according to their polarity, feelings and emotions, urgency, and even intentions. Huge multinational companies like Youtube, Facebook, Twitter, Netflix, etc. have started leveraging sentiment analysis to extract subjective information from original data providing a better sense of how customers are talking about their products and services, getting insights about business, and identifying product issues. Some of the most popularly used sentiment analyses are graded, emotional, aspect-based, and multilingual sentiment analyses. We will be using Aspect based sentiment analysis in our notebook which will analyze sentiments based on polarity like positive, negative, or neutral.
+This repository contains an in-depth analysis of motor vehicle collisions in New York City (NYC). The aim of this project is to gain valuable insights into the factors contributing to accidents, identify high-risk areas, and propose data-driven recommendations to improve road safety..
 
 ### Business Understanding
-With all of the tweets circulating every second it is hard to tell whether the sentiment behind a specific tweet will impact a company, or a person's, brand for being viral (positive), or devastate profit because it strikes a negative tone. Capturing sentiment in language is important in these times where decisions and reactions are created and updated in seconds. But, which words actually lead to the sentiment description?
+Road safety is a critical concern in NYC, where motor vehicle collisions have significant social and economic impacts. Understanding the patterns and causes of accidents can help various stakeholders, including city authorities, transportation agencies, and insurance companies, make informed decisions to mitigate risks and create safer streets for residents and visitors.
 
 ### Business Objectives
-We currently have a dataset with tweets and the sentiment it signifies. The goal is to apply 3 machine learning models specifically using Neural Networks and choose the best model based on Accuracy of predicting the sentiment of a tweet. 
+We currently have a dataset contains comprehensive information on police-reported motor vehicle collisions in New York City (NYC).Each row represents a crash event, injuries, fatalities, or significant property damage.
 
-We will tune every model to have the most optimal hyperparameters and also plot their comparison.One of the most important usage we can think of is the analysis which allows you to keep track of what is being said about your product on an online platform and also know the negative/positive sides of making a decision(be it as a law passed by the government or review of a viral product). In the end, this can also help increase brands influence or a Government’s understanding of customers/people.
+The primary goal is to improve traffic safety in New York City by leveraging data-driven insights to address and mitigate motor vehicle collisions.The key tasks performed to achieve this objective include:
+
+#### 1. Data Gathering
+Diverse collision data was collected using NYC's Open Data portal, Google Big Query datasets, and third-party sources to ensure a comprehensive dataset for analysis.
+
+#### 2.Data Profiling and Quality Assurance: 
+Alteryx was utilized for in-depth data profiling, allowing for a thorough understanding of data characteristics and identification of any quality issues.
+
+#### 3. Dimensional Modeling: 
+A preliminary dimensional model was created using ER studios, identifying key facts and dimensions for insightful analysis.
+
+#### 4. Data Integration: 
+Efficient data integration workflows were designed using Talend and Alteryx to load data into staging tables, ensuring seamless data preparation for analysis.
+
+#### 5. Advanced Data Manipulation and Analytics: 
+Python and SQL were employed for advanced data manipulation and analytics, resulting in enhanced insights and an 80% increase in analysis efficiency.
+
+#### 6. Interactive Dashboards: 
+Interactive Tableau and Power BI dashboards were developed, enabling data-driven decision-making for enhancing traffic safety in NYC. These dashboards provide stakeholders with actionable insights for targeted interventions and accident prevention strategies.
 
 
 ### Data Cleaning and Preparation
