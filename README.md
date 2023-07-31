@@ -28,6 +28,7 @@ Used Talend and Alteryx:-
 1. To design data integration workflows
 2. Data standardization and Data manipulation
 3. To load data into staging tables, ensuring seamless data preparation for analysis.
+
 https://github.com/AkhilKaundinya/NYC-Motor-Vehicle-Collision/tree/main/Alteryx
 
 #### 5. Advanced Data Manipulation and Analytics: 
