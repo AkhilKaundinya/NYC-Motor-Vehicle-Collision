@@ -13,25 +13,31 @@ The primary goal is to improve traffic safety in New York City by leveraging dat
 #### 1. Data Gathering
 Diverse collision data was collected using NYC's Open Data portal, Google Big Query datasets, and third-party sources to ensure a comprehensive dataset for analysis.
 
+
 #### 2.Data Profiling and Quality Assurance: 
 Used Alteryx  for in-depth data profiling, allowing for a thorough understanding of data characteristics and identification of any quality issues.
+https://github.com/AkhilKaundinya/NYC-Motor-Vehicle-Collision/blob/main/Alteryx/Data%20Profiling.yxmd
 
 #### 3. Dimensional Modeling: 
 A preliminary dimensional model was created using ER studios
 Identifying key facts and dimensions for insightful analysis.
+https://github.com/AkhilKaundinya/NYC-Motor-Vehicle-Collision/tree/main/ERStudio
 
 #### 4. Data Integration: 
 Used Talend and Alteryx:-
 1. To design data integration workflows
 2. Data standardization and Data manipulation
 3. To load data into staging tables, ensuring seamless data preparation for analysis.
+https://github.com/AkhilKaundinya/NYC-Motor-Vehicle-Collision/tree/main/Alteryx
 
 #### 5. Advanced Data Manipulation and Analytics: 
 Python and SQL were employed for advanced data manipulation and analytics.
+https://github.com/AkhilKaundinya/NYC-Motor-Vehicle-Collision/tree/main/SQL
 
 #### 6. Interactive Dashboards: 
 Interactive Tableau and Power BI dashboards were developed, enabling data-driven decision-making for enhancing traffic safety in NYC. These dashboards provide stakeholders with actionable insights for targeted interventions and accident prevention strategies.
-
+PowerBI:-https://github.com/AkhilKaundinya/NYC-Motor-Vehicle-Collision/blob/main/PowerBI.pdf
+Tableau:-https://github.com/AkhilKaundinya/NYC-Motor-Vehicle-Collision/blob/main/Tableau.pdf
 
 - Skills and tools: SQL, Alteryx, Talend, PowerBi, Python, ER/Studio, Tableau, GCP
 - Concepts: EDA, Data Cleansing, Data Manupulation, Dealing with outliers and missing values, Data Modeling, Data Integration, ETL, Dashboard Creation, Data visualization, Data Analysis
